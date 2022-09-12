@@ -73,7 +73,7 @@ function GraphComponent({ vaultId }: { vaultId: VaultEntity['id'] }) {
       <CardContent>
         <ResponsiveContainer height={250}>
           <AreaChart data={chartData} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
-            <CartesianGrid vertical={false} stroke="#484D73" />
+            <CartesianGrid vertical={false} stroke="" />
             <YAxis
               dataKey="v"
               tick={{
@@ -100,16 +100,16 @@ function GraphComponent({ vaultId }: { vaultId: VaultEntity['id'] }) {
             />
             <Area
               dataKey="v"
-              stroke="#F5F5FF"
+              stroke="#f79ec8"
               strokeWidth={2}
-              fill="rgba(245, 245, 255, 0.1)"
-              fillOpacity={100}
+              fill="#f79ec8"
+              fillOpacity={0.4}
             />
             {showAverages.movingAverage && (
-              <Area dataKey="moveAverageValue" stroke="#4F93C4" strokeWidth={2} fill="none" />
+              <Area dataKey="moveAverageValue" stroke="#4F93C4" strokeWidth={2.5} fill="none" />
             )}
             {showAverages.simpleAverage && (
-              <ReferenceLine y={averageValue} stroke="#59A662" strokeDasharray="3 3" />
+              <ReferenceLine y={averageValue} stroke="#59A662" strokeDasharray="2 2" />
             )}
           </AreaChart>
         </ResponsiveContainer>

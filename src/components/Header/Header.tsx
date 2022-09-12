@@ -1,9 +1,8 @@
-import React, { memo, Suspense, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   AppBar,
-  Badge,
   Box,
   Container,
   Divider,
@@ -22,70 +21,69 @@ import {
   selectCurrentChainId,
   selectIsWalletConnected,
 } from '../../features/data/selectors/wallet';
-import { formatBigUsd } from '../../helpers/format';
+// import { formatBigUsd } from '../../helpers/format';
 import { BeefyState } from '../../redux-types';
 import { LanguageDropdown } from '../LanguageDropdown';
 import { ChainEntity } from '../../features/data/entities/chain';
 import { NetworkStatus } from '../NetworkStatus';
+// import { Transak } from '../Transak';
 import { styles } from './styles';
-import { BIG_ZERO } from '../../helpers/big-number';
+// import { BIG_ZERO } from '../../helpers/big-number';
 
 // lazy load web3 related stuff, as libs are quite heavy
 const WalletContainer = React.lazy(() => import(`./components/WalletContainer`));
 
 const useStyles = makeStyles(styles);
 
-const BifiPrice = connect((state: BeefyState) => {
-  const beefyPrice = state.entities.tokens.prices.byOracleId['BIFI'] || BIG_ZERO;
-  return { beefyPrice };
-})(({ beefyPrice }: { beefyPrice: BigNumber }) => {
-  const classes = useStyles();
-  return (
-    <a
-      className={classes.bifiPrice}
-      href="https://app.1inch.io/#/56/swap/BNB/BIFI"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img alt="BIFI" src={require(`../../images/bifi-logos/BIFI-TOKEN.svg`).default} />
-      {formatBigUsd(beefyPrice)}
-    </a>
-  );
-});
+// const BifiPrice = connect((state: BeefyState) => {
+//   const beefyPrice = state.entities.tokens.prices.byTokenId['BIFI'] || BIG_ZERO;
+//   return { beefyPrice };
+// })(({ beefyPrice }: { beefyPrice: BigNumber }) => {
+//   const classes = useStyles();
+//   return (
+//     <a
+//       className={classes.bifiPrice}
+//       href="https://app.1inch.io/#/56/swap/BNB/BIFI"
+//       target="_blank"
+//       rel="noreferrer"
+//     >
+//       <img alt="BIFI" src={require(`../../images/Mochi-logo.svg`).default} />
+//       {formatBigUsd(beefyPrice)}
+//     </a>
+//   );
+// });
 
-const NavLinks = memo(function () {
+const NavLinks = () => {
   const { t } = useTranslation();
   const classes = useStyles();
   const navLinks = [
-    { title: t('Header-Vaults'), url: '/' },
-    { title: t('Header-Proposals'), url: 'https://vote.beefy.finance' },
-    { title: t('Header-BuyCrypto'), url: '/onramp', badge: true },
-    { title: t('Header-News'), url: 'https://beefy.com/articles/' },
-    { title: t('Header-Docs'), url: 'https://docs.beefy.finance' },
+    { title: t('Stats'), path: 'https://dashboard.beefy.finance/' },
+    { title: t('Docs'), path: 'https://docs.beefy.finance' },
+    { title: t('Discord'), path: 'https://vote.beefy.finance/' },
+    { title: t('Twitter'), path: 'https://blog.beefy.finance/articles/' },
   ];
   return (
     <>
-      {navLinks.map(({ title, url, badge }) => (
-        <NavLink
-          activeClassName={classes.active}
-          exact={true}
-          className={classes.navLink}
-          key={url}
-          to={url[0] === '/' ? url : { pathname: url }}
-          target={url[0] === '/' ? undefined : '_blank'}
-        >
-          {badge ? (
-            <Badge badgeContent="New" color="primary">
-              {t(title)}
-            </Badge>
-          ) : (
-            t(title)
-          )}
-        </NavLink>
+      <NavLink
+        activeClassName={classes.active}
+        exact={true}
+        className={classes.navLink}
+        key={'explore'}
+        to="/"
+      >
+        {t('Explore')}
+      </NavLink>
+      {navLinks.map(({ title, path }) => (
+        <div key={title} className={classes.navLink}>
+          <a target="_blank" rel="noreferrer" href={path} key={title}>
+            {title}
+          </a>
+        </div>
       ))}
+      {/* <Transak className={classes.navLink}>{t('Header-Buy')}</Transak> */}
     </>
   );
-});
+};
 
 const ActiveChain = ({ networkId }: { networkId: string | null }) => {
   const classes = useStyles();
@@ -132,8 +130,8 @@ export const Header = connect((state: BeefyState) => {
                     alt="BIFI"
                     src={
                       isMobile
-                        ? require(`../../images/bifi-logos/header-logo-notext.svg`).default
-                        : require(`../../images/bifi-logos/header-logo.svg`).default
+                        ? require(`../../images/header-logo-notext.svg`).default
+                        : require(`../../images/MOCHI.svg`).default
                     }
                   />
                 </Link>
@@ -145,7 +143,7 @@ export const Header = connect((state: BeefyState) => {
               </Hidden>
               <Box className={classes.flex}>
                 <Hidden mdDown>
-                  <BifiPrice />
+                  {/* <BifiPrice /> */}
                   <Box>
                     <LanguageDropdown />
                   </Box>
@@ -199,7 +197,7 @@ export const Header = connect((state: BeefyState) => {
                   <Divider />
                   <Box className={classes.drawerBlack}>
                     <Box mx={2} my={2}>
-                      <BifiPrice />
+                      {/* <BifiPrice /> */}
                     </Box>
                     <Box mx={2} my={1} display="flex">
                       {isWalletConnected && <ActiveChain networkId={currentChainId} />}

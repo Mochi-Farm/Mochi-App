@@ -75,7 +75,6 @@ const SORT_COLUMNS: {
   { label: 'Filter-SortApy', sortKey: 'apy' },
   { label: 'Filter-SortDaily', sortKey: 'daily' },
   { label: 'Filter-SortTvl', sortKey: 'tvl' },
-  { label: 'Filter-SortSafety', sortKey: 'safetyScore' },
 ];
 
 const SortColumns = memo(function SortColumns() {
@@ -123,7 +122,6 @@ const SortDropdown = memo(function SortDropdown() {
       apy: t('Filter-SortApy'),
       daily: t('Filter-SortDaily'),
       tvl: t('Filter-SortTvl'),
-      safetyScore: t('Filter-SortSafety'),
     };
   }, [t]);
 

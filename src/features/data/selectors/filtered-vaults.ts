@@ -357,10 +357,6 @@ export const selectFilteredVaults = (state: BeefyState) => {
       }
       return sortDirMul * tvl.tvl.toNumber();
     });
-  } else if (filterOptions.sort === 'safetyScore') {
-    sortedVaults = sortBy(sortedVaults, vault => {
-      return sortDirMul * vault.safetyScore;
-    });
   } else if (filterOptions.sort === 'depositValue') {
     sortedVaults = sortBy(sortedVaults, vault => {
       const balance = selectUserVaultDepositInUsd(state, vault.id);

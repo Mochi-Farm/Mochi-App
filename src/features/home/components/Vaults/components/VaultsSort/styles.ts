@@ -3,9 +3,9 @@ import { Theme } from '@material-ui/core/styles';
 export const styles = (theme: Theme) => ({
   sortColumns: {
     display: 'grid',
-    width: '100%',
+    width: '95%',
     columnGap: '24px',
-    gridTemplateColumns: 'repeat(6, minmax(0, 1fr))',
+    gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
   },
   sortColumn: {
     ...theme.typography['subline-sm'],
@@ -41,7 +41,7 @@ export const styles = (theme: Theme) => ({
     fill: '#F5F5FF',
   },
   sortDropdown: {
-    backgroundColor: '#1B1E31',
+    backgroundColor: '#101124',
     [theme.breakpoints.up('md')]: {
       width: '200px',
       maxWidth: '100%',

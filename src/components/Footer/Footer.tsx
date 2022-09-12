@@ -7,33 +7,34 @@ import { ReactComponent as IconTelegram } from '../../images/socials/telegram.sv
 import { ReactComponent as IconDiscord } from '../../images/socials/discord.svg';
 import { ReactComponent as IconTwitter } from '../../images/socials/twitter.svg';
 import { ReactComponent as IconReddit } from '../../images/socials/reddit.svg';
+import { Link } from 'react-router-dom';
 
 // Re-using header translations, allowing overwrite with footer specific ones
 const navLinks = [
-  {
-    title: ['Footer-Proposals', 'Header-Proposals'],
-    path: 'https://vote.beefy.finance',
-  },
+  // {
+  //   title: ['Footer-Vote', 'Header-Vote'],
+  //   path: 'https://vote.beefy.finance/',
+  // },
   {
     title: ['Footer-Stats', 'Header-Stats'],
-    path: 'https://dashboard.beefy.com',
+    path: 'https://dashboard.beefy.finance/',
   },
-  {
-    title: ['Footer-News', 'Header-News'],
-    path: 'https://beefy.com/articles/',
-  },
+  // {
+  //   title: ['Footer-Blog', 'Header-Blog'],
+  //   path: 'https://blog.beefy.finance/articles/',
+  // },
   {
     title: ['Footer-Docs', 'Header-Docs'],
     path: 'https://docs.beefy.finance',
   },
-  {
-    title: 'Footer-Audit',
-    path: 'https://github.com/beefyfinance/beefy-audits',
-  },
-  {
-    title: 'Footer-MediaKit',
-    path: 'https://beefy.com/media-kit/',
-  },
+  // {
+  //   title: 'Footer-Forum',
+  //   path: 'https://forum.beefy.finance/',
+  // },
+  // {
+  //   title: 'Footer-Audit',
+  //   path: 'https://github.com/beefyfinance/beefy-audits',
+  // },
 ];
 
 const socialLinks = [
@@ -57,11 +58,11 @@ const socialLinks = [
     path: 'https://twitter.com/beefyfinance',
     Icon: IconTwitter,
   },
-  {
-    title: 'Reddit',
-    path: 'https://www.reddit.com/r/Beefy/',
-    Icon: IconReddit,
-  },
+  // {
+  //   title: 'Reddit',
+  //   path: 'https://www.reddit.com/r/Beefy/',
+  //   Icon: IconReddit,
+  // },
 ];
 
 const useStyles = makeStyles(styles);
@@ -81,6 +82,11 @@ export const Footer = memo(function () {
             </a>
           </li>
         ))}
+        <li key={'media-kit'} className={classes.navItem}>
+          <Link className={classes.navLink} to="/media-kit">
+            {t('Footer-MediaKit')}
+          </Link>
+        </li>
       </ul>
       <ul className={classes.nav}>
         {socialLinks.map(({ title, path, Icon }) => (
