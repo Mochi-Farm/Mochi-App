@@ -1,6 +1,6 @@
 // To run: yarn launchpool bsc <0x12312312> CafeSwap
 import { MultiCall, ShapeWithLabel } from 'eth-multicall';
-import { addressBook } from 'blockchain-addressbook';
+import { addressBook } from 'mochimochi-addressbook';
 import Web3 from 'web3';
 import { promises as fs } from 'fs';
 

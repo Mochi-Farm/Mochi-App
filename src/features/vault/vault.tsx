@@ -9,7 +9,7 @@ import { Deposit } from './components/Deposit';
 import { Withdraw } from './components/Withdraw';
 import { TokenCard } from './components/TokenCard';
 import { StrategyCard } from './components/StrategyCard';
-import { SafetyCard } from './components/SafetyCard';
+// import { SafetyCard } from './components/SafetyCard';
 import { Graph } from './components/Graph';
 import { VaultsStats } from './components/VaultsStats';
 import { BoostCard } from './components/BoostCard';
@@ -35,8 +35,8 @@ import { CowLoader } from '../../components/CowLoader';
 import { MinterCards } from './components/MinterCards';
 import { InfoCards } from './components/InfoCards/InfoCards';
 import { RetirePauseReason } from './components/RetirePauseReason';
-import { InsuraceCard } from './components/InsuraceCard';
-import { NexusCard } from './components/NexusCard';
+// import { InsuraceCard } from './components/InsuraceCard';
+// import { NexusCard } from './components/NexusCard';
 import { SolaceCard } from './components/SolaceCard';
 import { VaultMeta } from './components/VaultMeta';
 import { useAppSelector } from '../../store';
@@ -150,9 +150,9 @@ const VaultContent = memo<VaultContentProps>(function VaultContent({ vaultId }) 
                 {dw === 'deposit' ? <Deposit vaultId={vaultId} /> : <Withdraw vaultId={vaultId} />}
               </div>
               <MinterCards vaultId={vaultId} />
-              <div>
+              {/* <div>
                 <NexusCard />
-              </div>
+              </div> */}
               {isQidao && (
                 <div>
                   <QiDao vaultId={vaultId} />
@@ -165,7 +165,7 @@ const VaultContent = memo<VaultContentProps>(function VaultContent({ vaultId }) 
               )}
               {isInsurace && (
                 <div>
-                  <InsuraceCard />
+                  {/* <InsuraceCard /> */}
                 </div>
               )}
               {isSolace && (
@@ -182,7 +182,7 @@ const VaultContent = memo<VaultContentProps>(function VaultContent({ vaultId }) 
               {isGovVault(vault) && <GovDetailsCard vaultId={vaultId} />}
               {!isGovVault(vault) ? <Graph vaultId={vaultId} /> : null}
               <LiquidityPoolBreakdownLoader vaultId={vaultId} />
-              <SafetyCard vaultId={vaultId} />
+              {/* <SafetyCard vaultId={vaultId} /> */}
               {!isGovVault(vault) ? <StrategyCard vaultId={vaultId} /> : null}
               <InfoCards chainId={vault.chainId} vaultId={vault.id} />
               {vault.assetIds.map(tokenId => (

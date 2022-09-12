@@ -36,7 +36,7 @@ const mo_SRC = {};
 async function p_loadChain( O_CHN)	{
 	//note the specified chain's source token data
 	mo_SRC[ O_CHN.S_DIR] = (await import( 
-									`../../node_modules/blockchain-addressbook/build/address-book/${
+									`../../node_modules/mochimochi-addressbook/build/address-book/${
 									O_CHN.S_DIR}/tokens/tokens.js`))[ 'tokens']; 
 
 	console.log( "loading: " + O_CHN.S_DIR);

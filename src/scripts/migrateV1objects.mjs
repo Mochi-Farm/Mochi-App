@@ -633,7 +633,7 @@ async function Po_resolveBoosts( OAO_SRC_VLTS,
 			        return o_vlts;}, {});
  
 		//for each source boost on the chain...
-		const S_NTV = (await import( 'blockchain-addressbook')).addressBook[ 
+		const S_NTV = (await import( 'mochimochi-addressbook')).addressBook[ 
 																							O_CHN.S_ABOOK_ALIAS ? O_CHN.S_ABOOK_ALIAS : 
 																							O_CHN.S_SRC].tokens.WNATIVE.symbol.slice( 1);
 		let s, o;

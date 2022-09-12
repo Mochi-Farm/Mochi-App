@@ -2,7 +2,7 @@ import { createTheme } from '@material-ui/core/styles';
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography';
 
 const fontStack = [
-  '"DM Sans"',
+  '"VCR OSD Mono"',
   'system-ui',
   '-apple-system',
   '"Segoe UI"',
@@ -35,14 +35,14 @@ const fontStyles: Record<string, TypographyStyleOptions> = {
     fontWeight: 500,
   },
   'body-lg': {
-    fontFamily: fontStack,
-    fontSize: '16px',
+    fontFamily: 'DM Sans',
+    fontSize: '18px',
     lineHeight: '24px',
     textTransform: 'none' as const,
     fontWeight: 400,
   },
   'body-lg-med': {
-    fontFamily: fontStack,
+    fontFamily: fontStack, // ALL VAUTLS ELIGIBLE VAULTS
     fontSize: '16px',
     lineHeight: '24px',
     textTransform: 'none' as const,
@@ -63,7 +63,7 @@ const fontStyles: Record<string, TypographyStyleOptions> = {
     fontWeight: 500,
   },
   'subline-lg': {
-    fontFamily: fontStack,
+    fontFamily: 'DM Sans', // DEPOSTED MONTHLY YIELD DAILY YIELD AVG. APY
     fontSize: '15px',
     lineHeight: '24px',
     fontWeight: 500,
@@ -83,17 +83,17 @@ const fontStyles: Record<string, TypographyStyleOptions> = {
 const theme = createTheme({
   palette: {
     type: 'dark',
-    primary: { main: '#59A662', light: '#CDF7D2', dark: '#004708' },
+    primary: { main: '#f79ec8', light: '#FCAED3', dark: '#FCA2CC' },
     background: {
       default: '#232743',
       paper: '#232743',
       light: '#313759',
       content: '#2D3153',
       contentLight: '#F4F4F4',
-      header: '#121212',
-      footer: '#121212',
-      cta: '#59A662',
-      appBG: '#1B1E31',
+      header: '#17182c',
+      footer: '#17182c',
+      cta: '#f79ec8',
+      appBG: '#101124',
       filters: {
         active: '#4C5480',
         inactive: '#262A40',
@@ -114,13 +114,13 @@ const theme = createTheme({
         bgLine: '#E5E5E5',
         bgBtn: '#363B63',
         text: '#2D3153',
-        error: '#DC2C10',
+        error: '#FF7F7F',
       },
     },
     text: {
       primary: '#F5F5FF',
       secondary: '#D0D0DA',
-      disabled: '#999CB3',
+      disabled: '#8A8EA8',
     },
   },
   typography: {

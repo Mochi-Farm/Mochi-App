@@ -12455,6 +12455,11 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.5, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
+mochimochi-addressbook@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mochimochi-addressbook/-/mochimochi-addressbook-1.0.1.tgz#938b7978f321b08958b871199652d0793fbfd526"
+  integrity sha512-aZ8jIVmH0x6mWykxw7EIYDLt8VA6mDEHukW/DVTE9WQRLs0AeTXTe1RMIQBMRKGlzlg6f7uTvpcsr5c7+s7a7g==
+
 mock-fs@^4.1.0:
   version "4.14.0"
   resolved "https://registry.npmjs.org/mock-fs/-/mock-fs-4.14.0.tgz"

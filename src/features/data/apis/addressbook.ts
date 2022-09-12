@@ -23,7 +23,7 @@ export const getChainAddressBook = memoize(
   async (chain: ChainEntity): Promise<ChainAddressBook> => {
     const addressbookChain = chain.id === 'harmony' ? 'one' : chain.id;
     const addressBook = (await import(
-      `blockchain-addressbook/build/address-book/${addressbookChain}/tokens/tokens`
+      `mochimochi-addressbook/build/address-book/${addressbookChain}/tokens/tokens`
     )) as { tokens: { [tokenId: TokenEntity['id']]: AddressBookTokenConfig } };
 
     const wnative = addressBook.tokens['WNATIVE'];

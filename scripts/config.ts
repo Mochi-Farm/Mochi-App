@@ -7,7 +7,7 @@ const chainConfigs = Object.fromEntries(
 );
 
 /** What chains to exclude from chainIds array and thus any validation */
-export const excludeChains: string[] = ['heco'];
+export const excludeChains: string[] = ['heco', 'arbitrum', 'optimism', 'bsc', 'fantom', 'avax', 'polygon', 'emerald', 'aurora', 'fuse', 'fuse', 'moonbeam', 'moonriver', 'celo', 'cronos', 'one', 'harmony'];
 
 export const allChainIds: string[] = Object.keys(chainConfigs);
 export const chainIds: string[] = allChainIds.filter(chainId => !excludeChains.includes(chainId));

@@ -1,5 +1,5 @@
 import { MultiCall } from 'eth-multicall';
-import { addressBook } from 'blockchain-addressbook';
+import { addressBook } from 'mochimochi-addressbook';
 import Web3 from 'web3';
 import BigNumber from 'bignumber.js';
 import { isEmpty, isValidChecksumAddress, maybeChecksumAddress } from './utils';
@@ -29,9 +29,9 @@ const overrides = {
 };
 
 const oldValidOwners = [
-  addressBook.fantom.platforms.beefyfinance.devMultisig,
-  addressBook.polygon.platforms.beefyfinance.devMultisig,
-  addressBook.arbitrum.platforms.beefyfinance.devMultisig,
+  // addressBook.fantom.platforms.beefyfinance.devMultisig,
+  // addressBook.polygon.platforms.beefyfinance.devMultisig,
+  // addressBook.arbitrum.platforms.beefyfinance.devMultisig,
 ];
 
 const oldValidFeeRecipients = {};

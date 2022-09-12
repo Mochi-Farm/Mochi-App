@@ -32,6 +32,7 @@
     "i18next": "^20.3.2",
     "i18next-browser-languagedetector": "^6.1.2",
     "lodash": "^4.17.21",
+    "mochimochi-addressbook": "^1.0.1",
     "moment": "^2.29.1",
     "re-reselect": "^4.0.0",
     "react": "^17.0.1",
