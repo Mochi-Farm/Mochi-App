@@ -194,8 +194,8 @@ export class WalletConnectionApi implements IWalletConnectionApi {
         icon: require(`../../../../images/Mochi-logo.svg`).default,
         logo: require(`../../../../images/MOCHI.svg`).default,
         description:
-          '',
-        gettingStartedGuide: '',
+          'Beefy is a Decentralized, Multichain Yield Optimizer that allows its users to earn compound interest on their crypto holdings. Beefy earns you the highest APYs with safety and efficiency in mind.',
+        gettingStartedGuide: 'https://docs.beefy.finance/',
       },
       chains: this.options.chains.map(chain => ({
         id: numberToHex(chain.networkChainId),
