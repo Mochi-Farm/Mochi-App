@@ -76,12 +76,12 @@ export const styles = (theme: Theme) => ({
   },
   success: {
     color: '#FFFFFF',
-    backgroundColor: '#59A662',
-    borderColor: '#59A662',
+    backgroundColor: '#f79ec8',
+    borderColor: '#f79ec8',
     '&:hover': {
       color: '#FFFFFF',
-      backgroundColor: '#68a871',
-      borderColor: '#68a871',
+      backgroundColor: '#e15c98',
+      borderColor: '#e15c98',
     },
   },
   filter: {

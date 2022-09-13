@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import BigNumber from 'bignumber.js';
 import { WritableDraft } from 'immer/dist/internal';
-import { isEmpty, sortBy, differenceWith, isEqual } from 'lodash';
+import { 
+  isEmpty, 
+  sortBy, 
+  // differenceWith, 
+  // isEqual 
+} from 'lodash';
 import { safetyScoreNum } from '../../../helpers/safetyScore';
 import { BeefyState } from '../../../redux-types';
 import { fetchAllContractDataByChainAction } from '../actions/contract-data';
@@ -12,8 +17,8 @@ import { FetchAllContractDataResult } from '../apis/contract-data/contract-data-
 import { ChainEntity } from '../entities/chain';
 import { VaultEntity, VaultGov, VaultStandard, VaultTag } from '../entities/vault';
 import {
-  selectIsBeefyToken,
-  selectIsTokenBluechip,
+  // selectIsBeefyToken,
+  // selectIsTokenBluechip,
   selectIsTokenStable,
 } from '../selectors/tokens';
 import { NormalizedEntity } from '../utils/normalized-entity';
@@ -292,23 +297,23 @@ function getVaultTagsAndSafetyScore(
     tags.push('stable');
   }
 
-  if (
-    apiVault.assets.every(tokenId => {
-      return selectIsBeefyToken(state, tokenId);
-    })
-  ) {
-    tags.push('beefy');
-  }
+  // if (
+  //   apiVault.assets.every(tokenId => {
+  //     return selectIsBeefyToken(state, tokenId);
+  //   })
+  // ) {
+  //   tags.push('beefy');
+  // }
 
-  const nonStables = differenceWith(apiVault.assets, chain.stableCoins, isEqual);
-  if (
-    nonStables.length > 0 &&
-    nonStables.every(tokenId => {
-      return selectIsTokenBluechip(state, tokenId);
-    })
-  ) {
-    tags.push('bluechip');
-  }
+  // const nonStables = differenceWith(apiVault.assets, chain.stableCoins, isEqual);
+  // if (
+  //   nonStables.length > 0 &&
+  //   nonStables.every(tokenId => {
+  //     return selectIsTokenBluechip(state, tokenId);
+  //   })
+  // ) {
+  //   tags.push('bluechip');
+  // }
 
   let score = 0;
   if (!isEmpty(apiVault.risks)) {

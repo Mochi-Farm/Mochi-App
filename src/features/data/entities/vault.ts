@@ -6,8 +6,8 @@ import { StrategyTypeEntity } from './strategy-type';
 // maybe a RiskAnalysis type would be better
 
 export type VaultTag =
-  | 'beefy'
-  | 'bluechip'
+  // | 'beefy'
+  // | 'bluechip'
   | 'low' /* low risk */
   | 'boost'
   | 'stable'

@@ -25,8 +25,8 @@ export const ExtendedFilters = memo<ExtendedFiltersProps>(function ({ desktopVie
         label={t('Filter-Retired')}
       />
       <CheckboxFilter className={classes.checkbox} filter="onlyPaused" label={t('Filter-Paused')} />
-      <CheckboxFilter className={classes.checkbox} filter="onlyBoosted" label={t('Filter-Boost')} />
-      <CheckboxFilter
+      {/* <CheckboxFilter className={classes.checkbox} filter="onlyBoosted" label={t('Filter-Boost')} /> */}
+      {/* <CheckboxFilter
         className={classes.checkbox}
         filter="onlyMoonpot"
         label={t('Filter-Moonpot')}
@@ -38,7 +38,7 @@ export const ExtendedFilters = memo<ExtendedFiltersProps>(function ({ desktopVie
             height={20}
           />
         }
-      />
+      /> */}
       {!desktopView ? <VaultCategoryDropdownFilter className={classes.select} /> : null}
       <PlatformDropdownFilter className={classes.select} />
     </div>

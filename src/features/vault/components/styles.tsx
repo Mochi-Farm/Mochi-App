@@ -59,7 +59,7 @@ export const styles = (theme: Theme) => ({
     padding: '12px 24px',
     borderRadius: '8px',
     '&:hover': {
-      backgroundColor: '#389D44',
+      backgroundColor: '#e15c98',
     },
     '&.Mui-disabled': {
       backgroundColor: 'rgba(255, 255, 255, 0.2)',

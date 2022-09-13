@@ -32,7 +32,7 @@ export const styles = (theme: Theme) => ({
     },
   },
   warning: {
-    backgroundColor: 'rgba(209, 152, 71, 0.15)',
+    backgroundColor: '#8F3939',
     '& $icon': {
       fill: '#D19847',
     },

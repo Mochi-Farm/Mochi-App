@@ -4,6 +4,6 @@ export const CATEGORY_OPTIONS: Record<FilteredVaultsState['vaultCategory'], stri
   all: 'Filter-CatgryAll',
   featured: 'Filter-CatgryFeatured',
   stable: 'Filter-CatgryStabl',
-  bluechip: 'Filter-CatgryBlue',
-  beefy: 'Filter-CatgryBeefy',
+  // bluechip: 'Filter-CatgryBlue',
+  // beefy: 'Filter-CatgryBeefy',
 };

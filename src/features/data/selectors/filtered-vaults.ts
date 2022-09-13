@@ -21,8 +21,8 @@ import {
 } from './boosts';
 import { selectIsVaultMoonpot } from './partners';
 import {
-  selectIsVaultBeefy,
-  selectIsVaultBlueChip,
+  // selectIsVaultBeefy,
+  // selectIsVaultBlueChip,
   selectIsVaultFeatured,
   selectIsVaultStable,
   selectVaultById,
@@ -204,15 +204,15 @@ export const selectFilteredVaults = (state: BeefyState) => {
     if (filterOptions.vaultCategory === 'featured' && !selectIsVaultFeatured(state, vault.id)) {
       return false;
     }
-    if (filterOptions.vaultCategory === 'bluechip' && !selectIsVaultBlueChip(state, vault.id)) {
-      return false;
-    }
+    // if (filterOptions.vaultCategory === 'bluechip' && !selectIsVaultBlueChip(state, vault.id)) {
+    //   return false;
+    // }
     if (filterOptions.vaultCategory === 'stable' && !selectIsVaultStable(state, vault.id)) {
       return false;
     }
-    if (filterOptions.vaultCategory === 'beefy' && !selectIsVaultBeefy(state, vault.id)) {
-      return false;
-    }
+    // if (filterOptions.vaultCategory === 'beefy' && !selectIsVaultBeefy(state, vault.id)) {
+    //   return false;
+    // }
 
     if (filterOptions.chainIds.length > 0 && !chainIdMap[vault.chainId]) {
       return false;

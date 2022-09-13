@@ -14,7 +14,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import { Close, Menu } from '@material-ui/icons';
-import BigNumber from 'bignumber.js';
+// import BigNumber from 'bignumber.js';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import {

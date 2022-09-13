@@ -2,7 +2,7 @@ import { Theme } from '@material-ui/core/styles';
 
 const loadingColor = '#D6D05C';
 const warningColor = '#D19847';
-const successColor = '#59A662';
+const successColor = '#f79ec8';
 
 export const styles = (theme: Theme) => ({
   container: {

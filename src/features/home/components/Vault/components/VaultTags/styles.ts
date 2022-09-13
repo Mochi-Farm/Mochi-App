@@ -29,10 +29,10 @@ export const styles = (theme: Theme) => ({
     backgroundColor: 'rgba(219, 131, 50, 0.3)',
   },
   vaultTagRetired: {
-    backgroundColor: 'rgba(209, 83, 71, 0.3)',
+    backgroundColor: '#F25A5A',
   },
   vaultTagPaused: {
-    backgroundColor: 'rgba(209, 152, 71, 0.3)',
+    backgroundColor: '#D99938',
   },
   vaultTagEarn: {
     backgroundColor: 'rgba(255, 255, 255, 0.3)',

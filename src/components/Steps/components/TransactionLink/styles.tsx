@@ -13,6 +13,7 @@ export const styles = (theme: Theme) => ({
     marginTop: '16px',
     justifyContent: 'flex-start',
     '& .MuiSvgIcon-root': {
+      color: '#F79EC8',
       marginLeft: '4px',
     },
   },
